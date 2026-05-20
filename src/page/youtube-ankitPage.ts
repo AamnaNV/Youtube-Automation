@@ -5,6 +5,9 @@ export class ankitPage{
 readonly page : Page;
 readonly searchBox: Locator;
 readonly fliter: Locator;
+readonly weekFilter: Locator;
+readonly movieFilter: Locator;
+readonly RelevanceFilter: Locator;
 
 
 
@@ -12,8 +15,10 @@ constructor(page:Page){
 
     this.page=page;
     this.searchBox=page.locator("//input[@class='ytSearchboxComponentInput yt-searchbox-input title']");
-    this.fliter=page.locator("//div[@id='tooltip' and @class='style-scope tp-yt-paper-tooltip fade-in-animation']/parent::tp-yt-paper-tooltip/preceding-sibling::yt-button-shape//yt-touch-feedback-shape//div[@class='ytSpecTouchFeedbackShapeStroke']");
-    
+    this.fliter=page.locator("//button[@aria-label='Search filters']");
+     this.weekFilter=page.locator("//yt-formatted-string[.='This week']");
+     this.movieFilter=page.locator("(//yt-formatted-string[.='Movies'])[1]");
+     this.RelevanceFilter=page.locator("//yt-formatted-string[.='Relevance']");
 }
 
 }
