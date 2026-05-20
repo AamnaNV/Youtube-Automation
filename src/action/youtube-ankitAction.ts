@@ -39,8 +39,7 @@ export class ankitAction {
     await this.youtubePage.searchBox.click();
     await this.youtubePage.searchBox.fill(videoName);
 
-    await this.page.getByRole("button", { name: "Search", exact: true }).click();
-
+await this.youtubePage.searchSuggestions.click();
     const videos = this.page.locator("ytd-video-renderer");
     await expect(videos.first()).toBeVisible();
 
@@ -59,8 +58,7 @@ export class ankitAction {
   async applyRelevanceFilter(videoName: string) {
     await this.youtubePage.searchBox.click();
     await this.youtubePage.searchBox.fill(videoName);
-
-    await this.page.getByRole("button", { name: "Search", exact: true }).click();
+await this.youtubePage.searchSuggestions.click();
 
     const videos = this.page.locator("ytd-video-renderer");
     await expect(videos.first()).toBeVisible();

@@ -30,7 +30,7 @@ test.describe("Youtube Search Functionality", () => {
         });
     });
 
-    test.only("Verify Search Suggestions", async ({ appActions }) => {
+    test("Verify Search Suggestions", async ({ appActions }) => {
         await test.step("Verify search suggestions are displayed", async () => {
             await appActions.ankitAction.verifySearchSuggestions();
         });
