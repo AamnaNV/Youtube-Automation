@@ -17,6 +17,11 @@ export class AamnaPage {
     readonly settingButton: Locator;
     readonly qualityButton: Locator;
 
+    readonly adSkipButton: Locator;
+    readonly adShowing: Locator;
+    readonly quality480p: Locator;
+    readonly playerContainer: Locator;
+
     constructor(page: Page) {
         this.page = page;
 
@@ -30,5 +35,10 @@ export class AamnaPage {
         this.fullScreenButton = page.locator('//button[@class="ytp-fullscreen-button ytp-button"]');
         this.settingButton = page.locator('//button[@class="ytp-button ytp-settings-button"]');
         this.qualityButton = page.locator('//div[@class="ytp-menuitem-label" and text() = "Quality"]');
+
+        this.adSkipButton = page.locator('.ytp-skip-ad-button, .ytp-ad-skip-button');
+        this.adShowing = page.locator('body.ad-showing');
+        this.quality480p = page.locator('//span[text()="480p"]');
+        this.playerContainer = page.locator('#movie_player');
     }
 }

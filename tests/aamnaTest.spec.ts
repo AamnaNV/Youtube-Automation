@@ -25,11 +25,11 @@ test("TC03: toggle full screen and verify player state", async ({appActions}) =>
     await appActions.aamnaAction.fullScreen();
 })
 
-// test.only("TC04: change video quality (360p to 720p)", async ({appActions}) => {
-//     await appActions.aamnaAction.goToYoutube();
-//     await appActions.aamnaAction.searchVideo(data.topic);
-//     await appActions.aamnaAction.openFirstVideo();
-//     await appActions.aamnaAction.verifyVideoPage();
-//     await appActions.aamnaAction.changeQuality();
-// })
+test.only("TC04: change video quality (360p to 720p)", async ({appActions}) => {
+    await appActions.aamnaAction.goToYoutube();
+    await appActions.aamnaAction.searchVideo(data.topic);
+    await appActions.aamnaAction.openFirstVideo();
+    await appActions.aamnaAction.verifyVideoPage();
+    await appActions.aamnaAction.changeQuality();
+})
 
